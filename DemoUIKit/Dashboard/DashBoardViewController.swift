@@ -15,6 +15,8 @@ class DashBoardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // logout button
+    
     @IBAction func LogoutTapped(_ sender: UIButton) {
         
 //        self.clear()
@@ -23,7 +25,7 @@ class DashBoardViewController: UIViewController {
         
     }
     
-    
+    // delete account
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         
                 self.clear()
