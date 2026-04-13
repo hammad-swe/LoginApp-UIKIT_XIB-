@@ -30,12 +30,7 @@ class UserModel{
            return user
        }
     
-    // checking user register
-    
-    static func isRegistered() -> Bool {
-            return load() != nil
-        }
-    
+        
     // clear user logout (Adding for information)
     static func clear() {
            UserDefaults.standard.removeObject(forKey: key)
