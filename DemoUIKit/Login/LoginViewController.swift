@@ -66,13 +66,14 @@ class LoginViewController: UIViewController {
     private func  navigateToDashBoard(){
         
         let dashVC = DashBoardViewController(nibName: "DashBoardViewController", bundle: nil)
+        let navController = UINavigationController(rootViewController: dashVC)
         guard let window = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first?.windows.first else { return }
         UIView.transition(with: window, duration: 0.4,
                           options: .transitionCrossDissolve,
                           animations: {
-            window.rootViewController = dashVC
+            window.rootViewController = navController 
         })
     }
     

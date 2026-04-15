@@ -27,7 +27,7 @@
                         <constraint firstAttribute="height" constant="120" id="dxG-xE-BFz"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome To Sign Up Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C74-yu-lvn">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Sign Up Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C74-yu-lvn">
                     <rect key="frame" x="16" y="295" width="408" height="21"/>
                     <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="17"/>
                     <nil key="textColor"/>

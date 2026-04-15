@@ -24,15 +24,33 @@ class SplashViewController: UIViewController {
     
     private func startSplashTimer() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { [weak self] in
-            self?.navigateToLoginScreen()
+            self?.navigateToNextScreen()
             
         }
         
     }
     
-    private func navigateToLoginScreen() {
-
-        let loginVC = LoginViewController()
+    private func navigateToNextScreen() {
+        
+        
+        let vc = DashBoardViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+//        let  isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
+//
+//        if isRegistered {
+//               let vc = DashBoardViewController()
+//            self.navigationController?.setViewControllers([vc], animated: true)
+//        }
+//        else{
+//            let vc = LoginViewController()
+//            self.navigationController?.pushViewController(vc, animated: true)
+//        }
+        
+        
+        
+        
+        
         
 //        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
 //              let window = windowScene.windows.first else { return }
@@ -43,7 +61,7 @@ class SplashViewController: UIViewController {
 //                          animations: {
 //            window.rootViewController = signVC
 //        })
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        
     }
     
 }

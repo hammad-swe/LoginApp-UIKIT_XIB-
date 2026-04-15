@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoardViewController" customModule="DemoUIKit" customModuleProvider="target">
             <connections>
+                <outlet property="EmployeeTableView" destination="1Nw-ip-2DW" id="g6j-I5-WaT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,48 +19,31 @@
             <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wellcome To Home Screen 🖥️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6C-4g-TzL">
-                    <rect key="frame" x="111.33333333333333" y="470.66666666666669" width="217.33333333333337" height="14.666666666666686"/>
-                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoF-Fk-RR7">
-                    <rect key="frame" x="50" y="515.33333333333337" width="340" height="44"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Logout"/>
-                    <connections>
-                        <action selector="LogoutTapped:" destination="-1" eventType="touchUpInside" id="Xme-Gj-YXD"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzL-UG-cKf">
-                    <rect key="frame" x="50" y="587.33333333333337" width="340" height="44"/>
-                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Delete Account">
-                        <color key="baseBackgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </buttonConfiguration>
-                    <connections>
-                        <action selector="deleteButtonTapped:" destination="-1" eventType="touchUpInside" id="Wep-gn-6hT"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1Nw-ip-2DW">
+                    <rect key="frame" x="0.0" y="124" width="440" height="764"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <color key="separatorColor" systemColor="systemGrayColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <color key="sectionIndexColor" systemColor="systemOrangeColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
+                    <color key="sectionIndexTrackingBackgroundColor" systemColor="systemOrangeColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bzL-UG-cKf" secondAttribute="trailing" constant="50" id="0rI-lH-8UZ"/>
-                <constraint firstItem="bzL-UG-cKf" firstAttribute="top" secondItem="AoF-Fk-RR7" secondAttribute="bottom" constant="28" id="3bp-7c-CJ6"/>
-                <constraint firstItem="AoF-Fk-RR7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="TQF-Ci-uaE"/>
-                <constraint firstItem="M6C-4g-TzL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="U3T-5u-bYE"/>
-                <constraint firstItem="M6C-4g-TzL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yo0-GH-GKE"/>
-                <constraint firstItem="bzL-UG-cKf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="eW5-fL-ueR"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AoF-Fk-RR7" secondAttribute="trailing" constant="50" id="gw9-H2-vaX"/>
-                <constraint firstItem="AoF-Fk-RR7" firstAttribute="top" secondItem="M6C-4g-TzL" secondAttribute="bottom" constant="30" id="xGk-EP-B32"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1Nw-ip-2DW" secondAttribute="bottom" id="1Te-ds-iEN"/>
+                <constraint firstItem="1Nw-ip-2DW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Ya-IT-fhQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Nw-ip-2DW" secondAttribute="trailing" id="Yx1-OQ-z6o"/>
+                <constraint firstItem="1Nw-ip-2DW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wwV-UO-FKp"/>
             </constraints>
-            <point key="canvasLocation" x="83" y="127"/>
+            <point key="canvasLocation" x="81.818181818181827" y="126.77824267782427"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.55294117649999996" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
