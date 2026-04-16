@@ -47,6 +47,23 @@ class LoginViewController: UIViewController {
         //        get value
         let username = userTextField.text?.trimmingCharacters(in: .whitespaces) ?? ""
         let password = passTextField.text ?? ""
+        
+        if username.isEmpty && password.isEmpty {
+            showalert("Please enter username and password")
+            return
+        }
+
+        if username.isEmpty {
+            showalert("Please enter username")
+            return
+        }
+
+        if password.isEmpty {
+            showalert("Please enter password")
+            return
+        }
+        
+       
         // read user
         let savedUsername = UserDefaults.standard.string(forKey: "Save_Username") ?? ""
         let savedPassword = UserDefaults.standard.string(forKey: "Save_password") ?? ""
@@ -57,7 +74,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        
+        UserDefaults.standard.set(true, forKey: "isRegistered")
         
         navigateToDashBoard()
     }

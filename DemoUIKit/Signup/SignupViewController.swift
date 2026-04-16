@@ -32,6 +32,34 @@ class SignupViewController: UIViewController {
         let password = password.text?.trimmingCharacters(in: .whitespaces) ?? ""
         
         
+        // validations
+        if username.isEmpty {
+            showalert("Please enter username")
+            return
+        }
+
+        if email.isEmpty {
+           showalert("Please enter email")
+            return
+        }
+
+        // Email format Validation
+//        if !isValidEmail(email) {
+//           // showalert("Please enter a valid email address")
+//            return
+//        }
+
+        if password.isEmpty {
+            showalert("Please enter password")
+            return
+        }
+
+//        password lenght
+        if password.count < 6 {
+           // showalert("Password must be at least 6 characters")
+            return
+        }
+        
         // save - UserDefaults
         
         UserDefaults.standard.set(username, forKey: "Save_Username")
@@ -63,5 +91,16 @@ class SignupViewController: UIViewController {
 //        present(loginVC, animated: true)
         let vc = LoginViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    // alet message
+    
+    private func showalert(_ message: String){
+        let alert =  UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alert, animated: true)
+        
+        
     }
 }

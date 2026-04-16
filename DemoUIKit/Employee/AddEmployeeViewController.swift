@@ -24,18 +24,47 @@ class AddEmployeeViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBOutlet weak var EmpolyeeImageView: UIImageView!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
+    // when user update
+    var employeeToEdit: Employee?
+    
     // for adding temporary image
     
     var selectedImage : UIImage?
     let ImagePicker = UIImagePickerController()
     
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitles()
+        getDataIfEditing()
         ImagePicker.delegate = self
         EmpolyeeImageView.layer.cornerRadius = 8
         EmpolyeeImageView.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
+    
+    func setTitles() {
+          if employeeToEdit != nil {
+              title = "Update Employee"
+              saveButton.setTitle("Update", for: .normal)
+          } else {
+              title = "Add Employee"
+              saveButton.setTitle("Save", for: .normal)
+          }
+      }
+    // get data from model if user edith
+    func getDataIfEditing() {
+           guard let employee = employeeToEdit else { return }
+        IdTextField.text = employee.id
+        EmplyeeNameTextField.text        = employee.name
+        EmplyeeDesiginationTextField.text       = employee.designation
+        EmpolyeeAddressTextField.text       = employee.address
+        EmpolyeeImageView.image = UIImage(data: employee.imageData)
+       }
+    
 
     // add button for getting image from phone storage
     @IBAction func AddImageButtonTapped(_ sender: UIButton) {
@@ -85,7 +114,11 @@ class AddEmployeeViewController: UIViewController, UIImagePickerControllerDelega
                 address: address,
                 imageData: imageData
             )
-        EmployeeModel.shared.addEmployee(employee)
+        if employeeToEdit != nil {
+                EmployeeModel.shared.updateEmployee(employee)
+            } else {
+                EmployeeModel.shared.addEmployee(employee)
+            }
         
         print("Employee Save Sucessfully")
 

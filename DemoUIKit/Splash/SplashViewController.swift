@@ -9,7 +9,7 @@ import UIKit
 
 class SplashViewController: UIViewController {
     
-   
+    
     @IBOutlet weak var logoImageView: UIImageView!
     
     @IBOutlet weak var NameLabel: UILabel!
@@ -31,21 +31,19 @@ class SplashViewController: UIViewController {
     }
     
     private func navigateToNextScreen() {
-        
-        
         let vc = DashBoardViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-//        let  isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
-//
-//        if isRegistered {
-//               let vc = DashBoardViewController()
-//            self.navigationController?.setViewControllers([vc], animated: true)
-//        }
-//        else{
-//            let vc = LoginViewController()
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+        self.navigationController?.setViewControllers([vc], animated: true)
+    }
+}
+//        if UserModel.isRegistered() {
+//                    let vc = DashBoardViewController()
+//                    self.navigationController?.setViewControllers([vc], animated: true)
+//                } else {
+//                    
+//                    let vc = LoginViewController()
+//                    self.navigationController?.setViewControllers([vc], animated: true)
+//                }
+//            }
         
         
         
@@ -62,6 +60,4 @@ class SplashViewController: UIViewController {
 //            window.rootViewController = signVC
 //        })
         
-    }
     
-}

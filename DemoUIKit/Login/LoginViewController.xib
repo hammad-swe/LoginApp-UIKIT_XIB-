@@ -66,19 +66,19 @@
                         </button>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-lB-eaK">
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-lB-eaK">
                     <rect key="frame" x="16" y="395" width="408" height="32"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-hq-so3">
-                            <rect key="frame" x="0.0" y="0.0" width="360" height="32"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="32"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30E-qI-QiR">
-                            <rect key="frame" x="360" y="0.0" width="48" height="32"/>
+                            <rect key="frame" x="376" y="0.0" width="32" height="32"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="32" id="H9C-XQ-pDh"/>
-                                <constraint firstAttribute="width" constant="48" id="TBC-MG-YHs"/>
+                                <constraint firstAttribute="width" constant="32" id="TBC-MG-YHs"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system">
