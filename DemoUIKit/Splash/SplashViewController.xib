@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,6 +22,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vtR-Os-hSg">
                     <rect key="frame" x="127.5" y="274" width="120" height="119"/>
+                    <color key="tintColor" red="0.18431372549019609" green="0.62745098039215685" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="WZe-S5-gGh"/>
                         <constraint firstAttribute="width" constant="120" id="Ycx-Ev-5i6"/>
@@ -33,6 +33,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkM-bp-VbH">
                             <rect key="frame" x="0.0" y="0.0" width="131.5" height="21.5"/>
+                            <color key="tintColor" red="0.27450980392156865" green="0.51764705882352935" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -47,7 +48,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <color key="backgroundColor" red="0.85490196078431369" green="0.97647058823529409" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="GVg-Sf-N55" firstAttribute="top" secondItem="vtR-Os-hSg" secondAttribute="bottom" constant="4" id="aCS-oZ-xX1"/>
                 <constraint firstItem="vtR-Os-hSg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aPq-7B-ZTV"/>
@@ -59,8 +60,5 @@
     </objects>
     <resources>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.55294117647058827" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

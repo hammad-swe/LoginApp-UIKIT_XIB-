@@ -126,10 +126,21 @@ extension DashBoardViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(model: employee)
         cell.editMode(isEditMode)
 
+        // for update
+        
         cell.onUpdateTapped = { [weak self] in
             guard let self = self else { return }
             self.navigateToForm(employee: employees[indexPath.row])
         }
+        
+        
+        // for delete
+        cell.onDeleteTapped = { [weak self] in
+               guard let self = self else { return }
+            EmployeeModel.shared.deleteEmployee(by: employee.id)
+               self.employees = EmployeeModel.shared.loadEmployees()
+               EmployeeTableView.deleteRows(at: [indexPath], with: .fade)
+           }
         return cell
     }
     
