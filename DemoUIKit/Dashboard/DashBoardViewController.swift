@@ -30,9 +30,13 @@ class DashBoardViewController: UIViewController{
 //        let emplyeeData = EmployeeModel.shared.loadEmployees()
 //        self.employees = emplyeeData
         
+        
+        
         let nib = UINib(nibName: "DashboardEmployeesTableViewCell", bundle: nil)
         EmployeeTableView.register(nib, forCellReuseIdentifier: "DashboardEmployeesTableViewCell")
         
+        EmployeeTableView.layer.cornerRadius = 15
+        EmployeeTableView.layer.borderColor = UIColor.lightGray.cgColor
         
         EmployeeTableView.delegate = self
         EmployeeTableView.dataSource = self
